@@ -1,6 +1,6 @@
 # 🌍 🏆 Goal Tracker React Challenge
 
-Your ...goal... is to add specified react components onto this existing react app which displays completed or in-progress world cup games.
+Your ...goal... is to add specified react components onto this existing react app which displays completed or in-progress 2018 World Cup games.
 
 ![Screenshot](screenshot.png)
 
