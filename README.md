@@ -8,7 +8,7 @@ You should do the following -
 
 - make a "GoalTimeLine" component that takes the relevant props and displays a soccer ball emoji - ⚽️ - in a position that indicates the time it was scored in the game
 
-- hovering over the soccer ball should display another compoment GoalDetails that shows the time of goal and who scored it
+- hovering over the soccer ball should display another component GoalDetails that shows the time of goal and who scored it
 
 HINTS:
 
