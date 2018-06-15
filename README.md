@@ -4,7 +4,7 @@ Your ...goal... is to add specified react components onto this existing react ap
 
 ![Screenshot](screenshot.png)
 
-The existing react app is fetching data from this open world cup score JSON api - http://worldcup.sfg.io/
+The existing react app is fetching data from this open World Cup JSON api - http://worldcup.sfg.io/
 
 You should do the following -
 
@@ -16,7 +16,7 @@ HINTS:
 
 - You will need to only render the events for each team which are goal events. Think about which array method you could use to get just the events you want.
 
-- You can position the soccer balls using Absolute position (so long as you have them in a container with position relative), and give them a left position that is equal to the time of the goal.
+- You can position the soccer balls using absolute position (so long as you have them in a container with position relative), and give them a left position that is equal to the time of the goal.
 
 - You will need to massage the goal time string from the JSON api, to remove the apostrophe indicating minutes, ie change _40'_ to _40_
 
