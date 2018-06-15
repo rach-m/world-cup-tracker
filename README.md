@@ -24,6 +24,14 @@ HINTS:
 
 - you can use CSS to conditionally render the tooltip without javascript by using nested css like _.soccer-ball:hover .tooltip { display: block}_
 
-BONUS:
+BONUSES:
 
-Further format the time string so that goals scored after regulation (in minutes after 90) display in the proper position
+- Further format the time string so that goals scored after regulation (in minutes after 90) display in the proper position
+
+- This API displays live game data, updated every minute.  Have your app pull data from the API every 90 seconds.
+
+- Organize the API data by modifying the API call or sorting the results so live games are on top
+
+- Show games that are scheduled to happen at bottom of game list with differentiated styling
+
+- Deploy your app to [https://www.netlify.com/](https://www.netlify.com/)
