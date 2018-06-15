@@ -25,14 +25,10 @@ class App extends Component {
         console.log(games);
 
         this.setState({
-          games
+          games,
         });
       });
   }
-
-
-
-
 
   render() {
     return (
@@ -42,7 +38,7 @@ class App extends Component {
           return (
             <div className="match">
               <Game key={index} game={game} />
-              <GoalTimeLine game={game} />
+              <GoalTimeLine game={game}  />
             </div>
           );
         })}

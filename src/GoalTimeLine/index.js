@@ -8,17 +8,26 @@ class GoalTimeLine extends Component {
     // return console.log({game});
     return <div className="game">
         <div className="home-team">
-          <span className = 'home'>
+          <span className="home">
             {game.home_team.code}: {game.home_team.goals}
-            <div className="goal-bar"></div>
+            <div className="goal-bar">
+              {game.home_team_events.map(goal => {
+                if (goal.type_of_event === "goal" || goal.type_of_event === "goal-own" || goal.type_of_event === "goal-penalty") {
+                  return <span className = 'ball'>⚽️</span>;
+                }
+              })}
+            </div>
           </span>
         </div>
         <div className="away-team">
-          <span className= 'away'>
+          <span className="away">
             {game.away_team.code}: {game.away_team.goals}
             <div className="goal-bar">
-
-    <span>⚽️</span>
+              {game.away_team_events.map(goal => {
+                if (goal.type_of_event === "goal" || goal.type_of_event === "goal-own" || goal.type_of_event === "goal-penalty") {
+                  return <span className = 'ball' style = {top= goal.type_of_event.time} >⚽️</span>;
+                }
+              })}
             </div>
           </span>
         </div>

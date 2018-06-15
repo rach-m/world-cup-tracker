@@ -17,4 +17,10 @@
 
 .away-team, .home-team{
   padding: 3px 5px;
+
+}
+
+.ball{
+  font-size: 45px;
+  position: absolute;
 }
