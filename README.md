@@ -14,7 +14,7 @@ HINTS:
 
 - You will need to only render the events for each team which are goal events. Think about which array method you could use to get just the events you want.
 
-- You can position the soccer balls using Absolute position (so long as you have t them in a container with position relative), and give them a left position that is equal to the time of the goal.
+- You can position the soccer balls using Absolute position (so long as you have them in a container with position relative), and give them a left position that is equal to the time of the goal.
 
 - You will need to massage the goal time string from the JSON api, to remove the apostrophe indicating minutes, ie change _40'_ to _40_
 
@@ -22,7 +22,7 @@ HINTS:
 
 - for the "tooltip" style goal detail you can use another absolute position element _ inside _ the element containing the positioned soccer ball
 
-- you can use CSS to conditionally render the tooltip without javascript by using nested css like _.soccer-ball:hover .tooltip { display: block}_
+- you can use CSS to conditionally render the tooltip without javascript by using nested css like _.soccer-ball:.tooltip { display: none}_ and _.soccer-ball:hover .tooltip { display: block}_
 
 BONUSES:
 
