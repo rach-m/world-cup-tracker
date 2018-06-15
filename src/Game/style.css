@@ -1,0 +1,14 @@
+.game {
+  background: #ebffd4;
+  color: #3a6e00;
+  padding: 20px;
+}
+
+.team {
+  font-size: 1.2rem;
+  margin: 0 10px;
+}
+
+.vs {
+  font-size: 0.75rem;
+}
