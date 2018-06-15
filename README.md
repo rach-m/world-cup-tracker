@@ -2,7 +2,7 @@
 
 Your ...goal... is to add onto this existing react app which displays completed or in-progress world cup games.
 
-\*[screenshot](screenshot.png)
+![Screenshot](screenshot.png)
 
 You should do the following -
 

@@ -7,7 +7,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      completedGames: [],
+      games: [],
     };
   }
 
@@ -17,16 +17,14 @@ class App extends Component {
         return response.json();
       })
       .then(json => {
-        const completedGames = json.filter(game => {
+        const games = json.filter(game => {
           return game.status !== 'future';
         });
 
-        console.log(json);
-
-        console.log(completedGames);
+        console.log(games);
 
         this.setState({
-          completedGames,
+          games,
         });
       });
   }
@@ -35,7 +33,7 @@ class App extends Component {
     return (
       <div className="app">
         <h1 className="heading">World Cup Goals</h1>
-        {this.state.completedGames.map((game, index) => {
+        {this.state.games.map((game, index) => {
           return <Game key={index} game={game} />;
         })}
       </div>
