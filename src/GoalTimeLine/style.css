@@ -1,0 +1,20 @@
+.away, .home{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goal-bar{
+  height: 50px;
+  width: 70%;
+  border: 1px solid darkgreen;
+  margin-left: 25px;
+  flex-grow: inherit;
+  border-radius: 7px;
+
+}
+
+.away-team, .home-team{
+  padding: 3px 5px;
+}

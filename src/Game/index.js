@@ -10,6 +10,7 @@ class Game extends Component {
           <span className="team">{game.home_team.country}</span>
           <span className="vs">vs.</span>
           <span className="team">{game.away_team.country}</span>
+          <p className = 'location'>{game.location}</p>
         </h3>
       </div>
     );
