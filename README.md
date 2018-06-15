@@ -4,6 +4,8 @@ Your ...goal... is to add specified react components onto this existing react ap
 
 ![Screenshot](screenshot.png)
 
+The existing react app is fetching data from this open world cup score JSON api - http://worldcup.sfg.io/
+
 You should do the following -
 
 - make a "GoalTimeLine" component that takes the relevant props and displays a soccer ball emoji - ⚽️ - in a position that indicates the time it was scored in the game
@@ -23,6 +25,8 @@ HINTS:
 - for the "tooltip" style goal detail you can use another absolute position element _ inside _ the element containing the positioned soccer ball
 
 - you can use CSS to conditionally render the tooltip without javascript by using nested css like _.soccer-ball:.tooltip { display: none}_ and _.soccer-ball:hover .tooltip { display: block}_
+
+- here is the color theme I used to start https://color.adobe.com/Soccer-Field-color-theme-598535/edit/
 
 BONUSES:
 
