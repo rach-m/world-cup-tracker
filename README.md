@@ -38,4 +38,8 @@ BONUSES:
 
 - Show games that are scheduled to happen at bottom of game list with differentiated styling
 
+- Use a CSS Grid layout to display the games two to a row
+
+- Have a total total goal count tracker at the top of the page
+
 - Deploy your app to [https://www.netlify.com/](https://www.netlify.com/)
