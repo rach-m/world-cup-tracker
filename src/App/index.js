@@ -14,7 +14,7 @@ class App extends Component {
 
   componentDidMount() {
 
-    fetch("https://world-cup-json.herokuapp.com/matches/today")
+    fetch("https://world-cup-json.herokuapp.com/matches")
       .then(response => {
         return response.json();
       })
