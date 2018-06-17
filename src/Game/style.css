@@ -12,3 +12,14 @@
 .vs {
   font-size: 0.75rem;
 }
+
+.location{
+  font-size: 10px;
+  padding-top: 8px;
+}
+
+.live{
+  font-size: 30px;
+  padding-bottom: 15px;
+font-weight: 700;
+}

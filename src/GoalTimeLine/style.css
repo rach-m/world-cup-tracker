@@ -7,11 +7,13 @@
 
 .goal-bar{
   height: 50px;
-  width: 70%;
+  width: 800px;
   border: 1px solid darkgreen;
   margin-left: 25px;
   flex-grow: inherit;
   border-radius: 7px;
+  position: relative;
+
 
 }
 
@@ -21,6 +23,6 @@
 }
 
 .ball{
-  font-size: 45px;
+  font-size: 35px;
   position: absolute;
 }

@@ -32,10 +32,6 @@ BONUSES:
 
 - Further format the time string so that goals scored after regulation (in minutes after 90) display in the proper position
 
-- This API displays live game data, updated every minute.  Have your app pull data from the API every 90 seconds.
-
-- Organize the API data by modifying the API call or sorting the results so live games are on top
-
 - Show games that are scheduled to happen at bottom of game list with differentiated styling
 
 - Use a CSS Grid layout to display the games two to a row

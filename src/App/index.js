@@ -13,6 +13,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+
     fetch("http://worldcup.sfg.io/matches")
       .then(response => {
         return response.json();
@@ -25,10 +26,11 @@ class App extends Component {
         console.log(games);
 
         this.setState({
-          games,
+          games
         });
       });
   }
+
 
   render() {
     return (
@@ -38,11 +40,13 @@ class App extends Component {
           return (
             <div className="match">
               <Game key={index} game={game} />
-              <GoalTimeLine game={game}  />
+              <GoalTimeLine key = {game.fifa_id} game={game}  />
             </div>
           );
         })}
+         <div className = 'reload'>{setTimeout('window.location.reload()', 90000)}</div>
       </div>
+
     );
   }
 }

@@ -1,19 +1,38 @@
 import React, { Component } from "react";
 import "./style.css";
-import Game from "../Game";
 
 class GoalTimeLine extends Component {
   render() {
     const { game } = this.props;
-    // return console.log({game});
-    return <div className="game">
+    return (
+      <div className="game">
         <div className="home-team">
           <span className="home">
             {game.home_team.code}: {game.home_team.goals}
             <div className="goal-bar">
               {game.home_team_events.map(goal => {
-                if (goal.type_of_event === "goal" || goal.type_of_event === "goal-own" || goal.type_of_event === "goal-penalty") {
-                  return <span className = 'ball'>⚽️</span>;
+                const time = Number(goal.time.replace("'", "").slice(0, 2));
+                const style = { left: time*6, top: 10 };
+                if (
+                  goal.type_of_event === "goal" ||
+                  goal.type_of_event === "goal-penalty"
+                ) {
+                  return (
+                    <span className="ball" style={style}>
+                      ⚽️
+                    </span>
+                  );
+                }
+              })}
+              {game.away_team_events.map(goal => {
+                const time = Number(goal.time.replace("'", "").slice(0, 2));
+                const style = { left: time*6, top: 10 };
+                if (goal.type_of_event === "goal-own") {
+                  return (
+                    <span className="ball" style={style}>
+                      ⚽️
+                    </span>
+                  );
                 }
               })}
             </div>
@@ -24,14 +43,35 @@ class GoalTimeLine extends Component {
             {game.away_team.code}: {game.away_team.goals}
             <div className="goal-bar">
               {game.away_team_events.map(goal => {
-                if (goal.type_of_event === "goal" || goal.type_of_event === "goal-own" || goal.type_of_event === "goal-penalty") {
-                  return <span className = 'ball' style = {top= goal.type_of_event.time} >⚽️</span>;
+                const time = Number(goal.time.replace("'", "").slice(0, 2));
+                const style = { left: time*6, top: 10 };
+                if (
+                  goal.type_of_event === "goal" ||
+                  goal.type_of_event === "goal-penalty"
+                ) {
+                  return (
+                    <span className="ball" style={style}>
+                      ⚽️
+                    </span>
+                  );
+                }
+              })}
+              {game.home_team_events.map(goal => {
+                const time = Number(goal.time.replace("'", "").slice(0, 2));
+                const style = { left: time*6, top: 10 };
+                if (goal.type_of_event === "goal-own") {
+                  return (
+                    <span className="ball" style={style}>
+                      ⚽️
+                    </span>
+                  );
                 }
               })}
             </div>
           </span>
         </div>
-      </div>;
+      </div>
+    );
   }
 }
 
