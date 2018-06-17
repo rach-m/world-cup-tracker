@@ -12,7 +12,7 @@ class GoalTimeLine extends Component {
             <div className="goal-bar">
               {game.home_team_events.map(goal => {
                 const time = Number(goal.time.replace("'", "").slice(0, 2));
-                const style = { left: time*6, top: 10 };
+                const style = { left: time*8, top: 10};
                 if (
                   goal.type_of_event === "goal" ||
                   goal.type_of_event === "goal-penalty"
@@ -20,19 +20,27 @@ class GoalTimeLine extends Component {
                   return (
                     <span className="ball" style={style}>
                       ⚽️
+                      <div className = 'display'>
+                      {time}'
+                      <br />
+                      {goal.player}
+                      </div>
                     </span>
                   );
                 }
               })}
               {game.away_team_events.map(goal => {
                 const time = Number(goal.time.replace("'", "").slice(0, 2));
-                const style = { left: time*6, top: 10 };
+                const style = { left: time*8, top: 10 };
                 if (goal.type_of_event === "goal-own") {
-                  return (
-                    <span className="ball" style={style}>
+                  return <span className="ball" style={style}>
                       ⚽️
-                    </span>
-                  );
+                      <div className="display">
+                        {time}'
+                        <br />
+                        {goal.player}
+                      </div>
+                    </span>;
                 }
               })}
             </div>
@@ -44,27 +52,33 @@ class GoalTimeLine extends Component {
             <div className="goal-bar">
               {game.away_team_events.map(goal => {
                 const time = Number(goal.time.replace("'", "").slice(0, 2));
-                const style = { left: time*6, top: 10 };
+                const style = { left: time*8, top: 10 };
                 if (
                   goal.type_of_event === "goal" ||
                   goal.type_of_event === "goal-penalty"
                 ) {
-                  return (
-                    <span className="ball" style={style}>
+                  return <span className="ball" style={style}>
                       ⚽️
-                    </span>
-                  );
+                      <div className="display">
+                        {time}'
+                        <br />
+                        {goal.player}
+                      </div>
+                    </span>;
                 }
               })}
               {game.home_team_events.map(goal => {
                 const time = Number(goal.time.replace("'", "").slice(0, 2));
-                const style = { left: time*6, top: 10 };
+                const style = { left: time*8, top: 10 };
                 if (goal.type_of_event === "goal-own") {
-                  return (
-                    <span className="ball" style={style}>
+                  return <span className="ball" style={style}>
                       ⚽️
-                    </span>
-                  );
+                      <div className="display">
+                        {time}'
+                        <br />
+                        {goal.player}
+                      </div>
+                    </span>;
                 }
               })}
             </div>

@@ -26,3 +26,16 @@
   font-size: 35px;
   position: absolute;
 }
+
+
+.display { display: none}
+
+.ball:hover .display {
+  display: block;
+  position: absolute;
+  font-size: 15px;
+  background: #5BAB00;
+  color: white;
+  padding: 10px;
+  z-index: 5;
+}
