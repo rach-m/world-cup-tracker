@@ -14,7 +14,7 @@ class App extends Component {
 
   componentDidMount() {
 
-    fetch("http://worldcup.sfg.io/matches")
+    fetch("https://world-cup-json.herokuapp.com/matches/today")
       .then(response => {
         return response.json();
       })
@@ -25,9 +25,7 @@ class App extends Component {
 
         console.log(games);
 
-        this.setState({
-          games
-        });
+        this.setState({ games });
       });
   }
 
