@@ -18,6 +18,7 @@ class Game extends Component {
       else{
         return <div className="game">
             <h3 className="game-h3">
+              <p className="live">Previous:</p>
               <span className="team">{game.home_team.country}</span>
               <span className="vs">vs.</span>
               <span className="team">{game.away_team.country}</span>

@@ -13,39 +13,46 @@ class App extends Component {
   }
 
   componentDidMount() {
+   let refresh = () => {
+      fetch("https://world-cup-json.herokuapp.com/matches/?details=true")
+        .then(response => {
+          return response.json();
+        })
+        .then(json => {
+          const games = json.filter(game => {
+            return game.status !== "future";
+          });
 
-    fetch("https://world-cup-json.herokuapp.com/matches/?details=true")
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
-        const games = json.filter(game => {
-          return game.status !== "future";
+          console.log(games);
+          console.log('refresh');
+
+          this.setState({ games });
         });
 
-        console.log(games);
+    };
+    refresh()
+    setInterval(refresh, 90000);
+    }
 
-        this.setState({ games });
-      });
-  }
+
 
 
   render() {
-    return (
-      <div className="app">
-        <h1 className="heading">World Cup Goals</h1>
-        {this.state.games.map((game, index) => {
-          return (
-            <div className="match">
-              <Game key={index} game={game} />
-              <GoalTimeLine key = {game.fifa_id} game={game}  />
-            </div>
-          );
-        })}
-         <div className = 'reload'>{setTimeout('window.location.reload()', 90000)}</div>
-      </div>
 
-    );
+    return <div className="app">
+
+
+        <h1 className="heading">World Cup Goals</h1>
+        <div className="copyright">
+          Created by Rachel Moskowitz - TESSERACT
+        </div>
+        {this.state.games.reverse().map((game, index) => {
+          return <div className="match">
+              <Game key={index} game={game} />
+              <GoalTimeLine game={game} />
+            </div>;
+        })}
+      </div>;
   }
 }
 

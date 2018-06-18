@@ -10,6 +10,7 @@
   margin: 1rem 0 2rem;
 }
 
-.reload{
-  display: none;
+.copyright{
+  padding-bottom: 15px;
+  font-size:15px;
 }
